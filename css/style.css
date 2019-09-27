@@ -3,12 +3,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  margin: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
 /* Navigation */
 .navigation .container {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex-align: baseline;
@@ -18,13 +23,14 @@
 
 .navigation .container p {
   font-size: 28px;
+  color: #fed136;
+  font-family: "Leckerli One", cursive;
 }
 
 .navigation ul {
   list-style-type: none;
   font-size: 14px;
   letter-spacing: 2px;
-  min-width: 685px;
 }
 
 .navigation ul li {
@@ -37,84 +43,54 @@
   color: white;
 }
 
-.navigation ul li:last-of-type {
-  font-size: 0;
-}
-
-.navigation ul li:last-of-type i {
-  font-size: 20px;
-}
-
 /* Header */
 header {
-  background-image: url(https://d-art.ppstatic.pl/kadry/k/r/1/ed/25/5bbc55071f2df_o_full.jpg);
+  background-image: url(http://cdn.shopify.com/s/files/1/1325/1705/articles/1087x725_Pocket_dump_af12508b-dbe0-45f1-9447-9b2d9c31ddf6.jpg?v=1557793664);
   background-size: cover;
-  padding-top: 20px;
+  padding-top: 45px;
 }
 
 header .splash {
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  position: relative;
+  height: 700px;
 }
 
-header .splash .splash-content {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
+.splash-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-header .splash .splash-content h1 {
+.splash-content h3, .splash-content h1 {
+  text-shadow: 6px 6px 8px black;
+}
+
+.splash-content h1 {
   font-size: 50px;
-}
-
-header .splash .splash-content h1 span {
+  font-style: italic;
   font-weight: normal;
 }
 
-/*
-{
-  "name": "task-runner",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "init-project": "npm install && npm-run-all init:*",
-    "init:dirs": "mkdirp sass css vendor images js",
-    "init:files": "touch README.md index.html sass/style.scss js/script.js",
-    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "test": "npm run test:html",
-    "test:html": "globstar nu-html-checker *.html",
-    "build:sass": "node-sass --output-style compact -o css sass",
-    "build:autoprefixer": "autoprefixer-cli css/style.css",
-    "build": "npm-run-all build:* test",
-    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
-    "build-dev": "npm-run-all build:autoprefixer build-dev:sass",
-    "watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\"",
-    "watch:sassprefixer": "onchange sass/*.scss -- npm run build-dev",
-    "watch": "npm-run-all build:* build-dev -p watch:*"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.26.7",
-    "globstar": "^1.0.0",
-    "mkdirp": "^0.5.1",
-    "node-sass": "^4.12.0",
-    "npm-run-all": "^4.1.5",
-    "nu-html-checker": "^0.1.0",
-    "onchange": "^6.1.0"
-  }
+.splash-content h3 {
+  font-size: 60px;
+  font-weight: bold;
 }
 
-*/
+.splash-content a {
+  font-size: 20px;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.splash-content .btn {
+  width: 240px;
+  height: 65px;
+  background-color: #fed136;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=style.css.map */
